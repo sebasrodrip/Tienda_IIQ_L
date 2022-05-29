@@ -3,20 +3,99 @@
     <head>
         <title>Tienda en linea</title>
         <meta charset="UTF-8">
+        <meta name="descripcion" content="Pagina de leccion 2"/>
+        <meta name="keywords" content="html5, css3, web, fidelitas"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>
-            <h1>Pagina Inicial</h1>
-            <p>Esta es la primera pagina del curso WEB y Patrones...</p>
-        </div>
-        
-        <p style="text-align: left;">Lorem ipsum dolor sit amet consectetur adipiscing elit semper vitae fermentum euismod, diam faucibus neque penatibus dapibus vivamus lectus fringilla magnis ornare. Fusce integer fermentum sagittis egestas taciti dignissim nostra interdum dapibus, lacus tempus ante augue eu turpis pellentesque. Dis facilisi quam ullamcorper hendrerit odio potenti natoque tempus pharetra, justo montes dui turpis class risus non ultrices scelerisque maecenas, rhoncus eros egestas himenaeos nibh curae ante viverra.</p>
-        <p style="text-align: center;">Tortor libero rhoncus fusce pulvinar cubilia commodo etiam montes rutrum mus purus, vel senectus fermentum nunc euismod pharetra urna nascetur mauris dignissim, viverra lacinia facilisi suscipit porttitor class accumsan habitasse dis facilisis. Sem class placerat eu risus iaculis morbi malesuada, potenti integer cras hac vulputate nascetur sapien, aliquam quisque nisi ornare eros lacus. Nam etiam volutpat curabitur inceptos bibendum feugiat hendrerit, tempor aliquet maecenas praesent nunc fusce, orci habitasse ullamcorper elementum vulputate tristique. Sagittis integer pretium risus dignissim vehicula egestas commodo id potenti, dis mus luctus vivamus vitae enim penatibus duis platea, gravida inceptos bibendum lobortis magnis iaculis sapien facilisi. Natoque aptent erat penatibus fringilla litora facilisi accumsan suspendisse rutrum cras, suscipit interdum duis ridiculus nam nibh consequat dui nisl ac auctor, faucibus viverra augue ut ad hendrerit cursus sodales montes.</p>
-        <p style="text-align: right;">Imperdiet ante taciti pulvinar feugiat sem tortor, egestas vitae ornare tellus semper, vestibulum sollicitudin torquent nam suspendisse. Dapibus litora vulputate dictumst accumsan sociosqu nulla id curabitur leo, hac fames feugiat inceptos nec ultricies urna venenatis nostra quam, nibh dictum magnis nam aliquet turpis donec aenean. Cum porta per metus class pretium euismod egestas sodales sapien a, nunc consequat vivamus semper tortor est quam nibh ultrices libero potenti, feugiat nec quisque dapibus phasellus bibendum auctor id at. Cras vulputate cubilia laoreet tortor potenti fermentum ultrices facilisi, erat netus inceptos enim lacus arcu pellentesque, posuere auctor interdum pharetra torquent vestibulum platea.</p>
-        
-        <br>
-        <br>
-        
-        <p>Ultima linea.</p>
+        <header id="encabezado">
+            <h1>Tienda en linea</h1>
+            <br>
+        </header>
+        <nav id="menu">
+            <a href="ejemplo9.html">Atras</a>
+            <a href="index.html">Home</a>
+            <a href="ejemplo2.html">Adelante</a>
+        </nav>
+        <aside id="barraLateral">
+            <h2>Productos mas vendidos</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </aside>
+        <section id="contenido">
+            <h2>Articulos principales</h2>
+            <article>
+                <header>Asus Vivobook</header>
+                <p class="descripcion">
+                    <cite>Lorem ipsum dolor sit amet,</cite> consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <figure>
+                    <img src="images/Equipo1.jpg" width="200"/>
+                    <figcaption>Imagen con fines ilustrativos</figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>Alienware ATD 900</header>
+                <p class="descripcion">
+                    <strong>Lorem ipsum dolor sit amet,</strong> consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <figure>
+                    <img src="images/Equipo2.jpg" width="200"/>
+                    <figcaption>Mas vendido</figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>Impresora 3D</header>
+                <p class="descripcion">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <figure>
+                    <img src="images/Equipo3.jpg" width="200"/>
+                    <figcaption>Mas economico</figcaption>
+                </figure>
+            </article>
+            <br>
+            <article>
+                <h2>Lineas de productos</h2>
+                <table border="0">
+                    <thead id="encabezadoTabla">
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripcion</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaResumen">
+                        <tr>
+                            <td>1</td>
+                            <td>Teclados</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Monitores</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Headsets</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Baterias</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Cargadores</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Portatiles</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <footer id="piePagina">
+            Derechos reservados &COPY; 2022 <address style="display: inline">Tibás, Colima</address> <address style="display: inline">Tel 8820-2655</address>
+        </footer>
     </body>
 </html>
