@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.Tienda.service.ArticuloService;
+import com.Tienda.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Controller
@@ -15,6 +16,9 @@ public class ArticuloController {
     
     @Autowired
     private ArticuloService articuloService;
+    
+    @Autowired
+    private CategoriaService categoriaService;
 
     @GetMapping("/articulo/listado")
     public String inicio(Model model) {       
@@ -24,7 +28,9 @@ public class ArticuloController {
     }
     
     @GetMapping("/articulo/nuevo")
-    public String nuevoArticulo(Articulo articulo){
+    public String nuevoArticulo(Articulo articulo, Model model){
+        var categorias = categoriaService.getCategorias(true);
+        model.addAttribute("categorias",categorias);
         return "/articulo/modificar";
     }
     
@@ -36,6 +42,8 @@ public class ArticuloController {
     
     @GetMapping("/articulo/modificar/{idArticulo}")
     public String modificarArticulo(Articulo articulo, Model model){
+        var categorias = categoriaService.getCategorias(false);
+        model.addAttribute("categorias",categorias);
         articulo = articuloService.getArticulo(articulo);
         model.addAttribute("articulo",articulo);
         return "/articulo/modificar";
