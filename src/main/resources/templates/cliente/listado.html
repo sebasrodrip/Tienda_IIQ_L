@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://thymeleaf.org/extras/spring-security">
     <head>
         <title>Techshop</title>
         <meta charset="UTF-8">
@@ -19,8 +19,8 @@
                             <th th:text="#{cliente.correo}">Correo</th>
                             <th th:text="#{cliente.telefono}">Telefono</th>
                             <th th:text="#{cliente.limite}">Limite</th>
-                            <th th:text="#{accion.actualizar}">Modificar</th>
-                            <th th:text="#{accion.eliminar}">Eliminar</th>
+                            <th th:text="#{accion.actualizar}" sec:authorize="hasRole('ROLE_ADMIN')">Modificar</th>
+                            <th th:text="#{accion.eliminar}" sec:authorize="hasRole('ROLE_ADMIN')">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,8 +30,8 @@
                             <td th:text="${item.correo}"></td>
                             <td th:text="${item.telefono}"></td>
                             <td th:text="${item.credito.limite}"></td>
-                            <td><a th:href="@{/cliente/modificar/} + ${item.idCliente}" th:text="#{accion.actualizar}">Modificar</a></td>
-                            <td><a th:href="@{/cliente/eliminar/} + ${item.idCliente}" th:text="#{accion.eliminar}">Eliminar</a></td>
+                            <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/cliente/modificar/} + ${item.idCliente}" th:text="#{accion.actualizar}">Modificar</a></td>
+                            <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/cliente/eliminar/} + ${item.idCliente}" th:text="#{accion.eliminar}">Eliminar</a></td>
                         </tr>
                     </tbody>
                 </table>
